@@ -1,9 +1,27 @@
 {
-  "name": "forja-fitness",
+  "name": "forja-fitness-coach",
   "private": true,
-  "version": "2.0.0",
+  "version": "4.0.0",
   "type": "module",
-  "scripts": {"dev": "vite --host 0.0.0.0", "build": "vite build", "preview": "vite preview --host 0.0.0.0", "test": "node --test"},
-  "dependencies": {"lucide-react": "^0.468.0", "react": "^18.3.1", "react-dom": "^18.3.1", "recharts": "^2.15.2"},
-  "devDependencies": {"@vitejs/plugin-react": "^4.4.1", "vite": "^6.1.0"}
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test src/*.test.js",
+    "check": "npm run test && npm run build && npm run verify:deploy",
+    "verify:deploy": "node scripts/verify-dist.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.15.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "vite": "^6.1.0"
+  }
 }
