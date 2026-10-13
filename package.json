@@ -1,15 +1,15 @@
 {
   "name": "forja-fitness-coach",
   "private": true,
-  "version": "4.0.0",
+  "version": "4.0.1",
   "type": "module",
   "engines": {
     "node": ">=20.19.0"
   },
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0",
+    "dev": "node ./node_modules/vite/bin/vite.js --host 0.0.0.0",
+    "build": "node ./node_modules/vite/bin/vite.js build",
+    "preview": "node ./node_modules/vite/bin/vite.js preview --host 0.0.0.0",
     "test": "node --test src/*.test.js",
     "check": "npm run test && npm run build && npm run verify:deploy",
     "verify:deploy": "node scripts/verify-dist.mjs"
